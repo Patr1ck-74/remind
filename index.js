@@ -3269,7 +3269,7 @@ async function checkExpiringSubscriptions(env) {
         else if (sub.daysRemaining < 0) statusText = `🚨 **${sub.name}** (${typeText}) ${periodText} 已过期 ${Math.abs(sub.daysRemaining)} 天${lunarExpiryText}`;
         else statusText = `📅 **${sub.name}** (${typeText}) ${periodText} 将在 ${sub.daysRemaining} 天后到期${lunarExpiryText}`;
 
-        if (sub.notes) statusText += `\n   备注: ${sub.notes}`;
+        if (sub.notes) statusText += '\n  备注: ${sub.notes}';
         commonContent += statusText + '\n\n';
       }
 
